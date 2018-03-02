@@ -36,6 +36,8 @@ addChrome() {
 
 }
 
+apt-get -f install
+
 addPapers() {
 
   mv "$(dirname $0)/Wallpaper/*.jpg" /Home/Pictures
