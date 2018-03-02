@@ -15,7 +15,11 @@ addRepos (){
 
 }
 
+apt-get update
+
 addApps(){
+  apt-get install vlc -y
+  apt-get install krita -y
 
 }
 
