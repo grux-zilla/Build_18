@@ -24,6 +24,9 @@ echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | 
 
   apt-get install oracle-java8-installer
 
+  apt-get install git make screenfetch -y
+
+
 }
 
 addChrome() {
@@ -43,10 +46,35 @@ addPapers() {
   mv "$(dirname $0)/Wallpaper/*.jpg" /Home/Pictures
 }
 
+gitConf() {
+  git config --global user.name "grux-zilla"
+  git config --global user.email "gojirafan35@gmail.com"
+
+}
+
+apt-get update && apt-get upgrade -y
+
+
+############################################
+#          TASK SEQUENCE BEGINS            #
+#          Order of Opperations            #
+############################################
+
+
 addApps;
+
+  sleep 5
 
 addRepos;
 
+  sleep 5
+
 addChrome;
 
+  sleep 5
+
 addPapers;
+
+  sleep 5
+
+gitConf;
