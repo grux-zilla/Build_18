@@ -42,7 +42,7 @@ apt-get -f install
 
 addPapers() {
 
-  mv "$(dirname $0)/Wallpaper/*.jpg" /Home/Pictures
+  mv "$(dirname $0)/Wallpaper/*.jpg" /grux/Home/Pictures
 }
 
 gitConf() {
