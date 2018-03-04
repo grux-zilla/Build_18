@@ -30,10 +30,9 @@ echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | 
 }
 
 addChrome() {
-  echo "deb [arch=amdx64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list
+  sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
   wget https://dl.google.com/linux/linux_signing_key.pub
-  apt-key add linux_signing_key.pub
   apt-get update
   apt-get install google-chrome-stable
 
