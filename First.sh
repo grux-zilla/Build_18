@@ -32,7 +32,7 @@ echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | 
 addChrome() {
   sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
-  wget https://dl.google.com/linux/linux_signing_key.pub
+  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
   apt-get update
   apt-get install google-chrome-stable
 
@@ -42,7 +42,7 @@ apt-get -f install
 
 addPapers() {
 
-  mv "$(dirname $0)/Wallpaper/*.jpg" /grux/Home/Pictures
+  mv "$(Build_18 $0)/Wallpaper/*.jpg" /home/grux/Pictures
 }
 
 gitConf() {
