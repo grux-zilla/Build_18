@@ -53,6 +53,13 @@ gitConf() {
 
 apt-get update && apt-get upgrade -y
 
+secureLogin() {
+  apt-get install libpam-google-authenticator
+
+  echo "auth required pam_google_authenticator.so" | sudo tee -a /etc/pam.d/gdm-password
+  
+
+}
 
 ############################################
 #          TASK SEQUENCE BEGINS            #
