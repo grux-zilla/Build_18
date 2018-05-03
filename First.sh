@@ -10,15 +10,19 @@ apt-get update && apt-get upgrade -y
 
 addRepos() {
     add-apt-repository ppa:webupd8team/java -y
-    add-apt-repository ppa:webupd8team/atom -y
-    add-apt-repository ppa:obsproject/obs-studio -y
-
 }
 
 apt-get update
 
 addApps() {
   apt-get install vlc krita atom ffmpeg obs-studio redbook -y
+  apt-get install snap snapcraft -y
+
+  snap install skype --classic
+  snap install atom
+  snap install obs-studio
+  snap install discord
+
 
 echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections
 
