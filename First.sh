@@ -55,10 +55,9 @@ apt-get update && apt-get upgrade -y
 
 secureLogin() {
   apt-get install libpam-google-authenticator
-
-  echo "auth required pam_google_authenticator.so" | sudo tee -a /etc/pam.d/gdm-password
-  
-
+#after the install user should set up google authenticator on mobile device
+#and can use the command below to add the auth method login
+#  echo "auth required pam_google_authenticator.so" | sudo tee -a /etc/pam.d/gdm-password
 }
 
 ############################################
